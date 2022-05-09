@@ -3,15 +3,6 @@ on:
   pull_request:
 
 jobs:
-  debug-context:    
-    name: Debug event
-    runs-on: ubuntu-latest
-    steps:
-    - name: Print GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
-
   release-pr:
     runs-on: ubuntu-latest
     steps:
