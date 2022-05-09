@@ -1,7 +1,6 @@
 name: Create Release Pull Request
 on:
   pull_request:
-  workflow_dispatch:
 
 jobs:
   debug-context:    
@@ -11,8 +10,7 @@ jobs:
     - name: Print GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: |
-        echo "$GITHUB_CONTEXT"
+      run: echo "$GITHUB_CONTEXT"
 
   release-pr:
     runs-on: ubuntu-latest
@@ -23,5 +21,6 @@ jobs:
     steps:
       - uses: mondeja/release-action@debug-3rd-party
         id: release
+        name: Create release pull request
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
