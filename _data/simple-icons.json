@@ -1,0 +1,12 @@
+{
+    "icons": [
+        {
+            "title": "Simple Icons",
+            "hex": "111111",
+            "source": "https://simpleicons.org/",
+            "license": {
+                "type": "CC0-1.0"
+            }
+        }
+    ]
+}
