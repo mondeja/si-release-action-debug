@@ -1,0 +1,27 @@
+name: Create Release Pull Request
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  debug-context:    
+    name: Debug event
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: |
+        echo "$GITHUB_CONTEXT"
+
+  release-pr:
+    runs-on: ubuntu-latest
+    if: github.event_name != 'push'
+    outputs:
+      did-create-pr: ${{ steps.release.outputs.did-create-pr }}
+      new-version: ${{ steps.release.outputs.new-version }}
+    steps:
+      - uses: simple-icons/release-action@doc-63
+        id: release
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
