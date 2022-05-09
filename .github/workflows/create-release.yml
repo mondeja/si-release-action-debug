@@ -14,13 +14,8 @@ jobs:
 
   release-pr:
     runs-on: ubuntu-latest
-    if: github.event_name != 'push'
-    outputs:
-      did-create-pr: ${{ steps.release.outputs.did-create-pr }}
-      new-version: ${{ steps.release.outputs.new-version }}
     steps:
       - uses: mondeja/release-action@debug-3rd-party
-        id: release
         name: Create release pull request
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
