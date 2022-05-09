@@ -1,6 +1,14 @@
 {
     "icons": [
         {
+            "title": "GNU",
+            "hex": "A42E2B",
+            "source": "https://gnu.org",
+            "license": {
+                "type": "CC-BY-SA-2.0"
+            }
+        },
+        {
             "title": "Simple Icons",
             "hex": "111111",
             "source": "https://simpleicons.org/",
