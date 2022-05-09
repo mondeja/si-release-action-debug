@@ -21,7 +21,7 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: simple-icons/release-action@doc-63
+      - uses: mondeja/release-action@debug-3rd-party
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
