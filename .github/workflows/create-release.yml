@@ -6,7 +6,7 @@ jobs:
   release-pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: mondeja/release-action@debug-3rd-party
+      - uses: mondeja/release-action@fix-58
         name: Create release pull request
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
