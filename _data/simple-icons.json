@@ -3,10 +3,7 @@
         {
             "title": "GNU",
             "hex": "A42E2B",
-            "source": "https://gnu.org",
-            "license": {
-                "type": "CC0-1.0"
-            }
+            "source": "https://gnu.org"
         },
         {
             "title": "Simple Icons",
